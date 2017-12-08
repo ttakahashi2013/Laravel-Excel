@@ -447,7 +447,7 @@ class LaravelExcelWriter {
         // getAllSheets() returns $this if no sheets were added to the excel file
         if ($this->getAllSheets() instanceof $this) {
             throw new LaravelExcelException('[ERROR] Aborting spreadsheet render: a minimum of 1 sheet is required.');
-        
+        }
 
         // Restore active sheet index.
         $this->setActiveSheetIndex($activeIndex);
